@@ -4,7 +4,6 @@ before_install:
 install:
     - sudo apt-get install pypy
     - pip install tox
-    - pip install cffi
 before_script:
     - ulimit -c unlimited -S
 script:
