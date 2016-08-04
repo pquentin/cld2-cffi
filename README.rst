@@ -5,7 +5,7 @@ CLD2-CFFI - Python (CFFI) Bindings for Compact Language Detector 2
 
 -----
 
-|pypi| |build| |coverage| |lint|
+|pypi| |build| |win-build| |coverage| |lint|
 
 -----
 
@@ -137,11 +137,15 @@ Please see LICENSE_.
     :target: https://pypi.python.org/pypi/cld2-cffi
     :alt: Latest version released on PyPi
 
-.. |build| image:: https://img.shields.io/travis/GregBowyer/cld2-cffi/master.svg?style=flat-square&label=build
+.. |build| image:: https://img.shields.io/travis/GregBowyer/cld2-cffi/master.svg?style=flat-square&label=OSX%20Linux%20build
     :target: http://travis-ci.org/GregBowyer/cld2-cffi
     :alt: Build status 
 
-.. |coverage| image:: https://img.shields.io/codecov/c/github/GregBowyer/cld2-cffi.svg
+.. |win-build| image:: https://img.shields.io/appveyor/ci/GregBowyer/cld2-cffi.svg?maxAge=2592000&style=flat-square&label=Windows%20Build
+    :target: https://ci.appveyor.com/project/GregBowyer/cld2-cffi
+    :alt: Windows Build Status::
+
+.. |coverage| image:: https://img.shields.io/codecov/c/github/GregBowyer/cld2-cffi.svg?style=flat-square
     :target: https://codecov.io/github/GregBowyer/cld2-cffi
     :alt: Coverage
 
