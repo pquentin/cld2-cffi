@@ -24,7 +24,7 @@ import sys
 import os
 import re
 
-__VERSION__ = '0.1.3'
+__VERSION__ = '0.1.4'
 
 _ENC_TMPL = '''
 //
