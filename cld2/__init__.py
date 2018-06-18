@@ -117,9 +117,9 @@ Pedi, Seselwa, Venda, Waray_Philippines.
 from os.path import abspath, dirname, relpath
 from os.path import join as joinpath
 from collections import namedtuple
-from cffi import FFI
 import platform
 import six
+from cffi import FFI
 
 
 _DEBUG = False
@@ -353,11 +353,9 @@ def detect(utf8Bytes, isPlainText=True, hintTopLevelDomain=None,  # noqa
     def __cstr_or_null(string):
         if not string:
             return ffi.NULL
-        else:
-            if six.PY3 and isinstance(string, str):
-                return string.encode('ascii')
-            else:
-                return string
+        if six.PY3 and isinstance(string, str):
+            return string.encode('ascii')
+        return string
 
     cld_results = cld2.cld_create_results()  # noqa
 
@@ -421,11 +419,10 @@ def detect(utf8Bytes, isPlainText=True, hintTopLevelDomain=None,  # noqa
                 languages,
                 tuple(vectors)
             )
-        else:
-            return Detections(
-                bool(cld_results.reliable),
-                int(cld_results.bytes_found),
-                languages,
-            )
+        return Detections(
+            bool(cld_results.reliable),
+            int(cld_results.bytes_found),
+            languages,
+        )
     finally:
         cld2.cld_destroy_results(cld_results)  # noqa
