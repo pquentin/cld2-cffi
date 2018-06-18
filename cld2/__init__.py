@@ -393,7 +393,7 @@ def detect(utf8Bytes, isPlainText=True, hintTopLevelDomain=None,  # noqa
             raise ValueError("input contains invalid UTF-8 around byte " +
                              "%d (of %d)" % (
                                  cld_results.valid_prefix_bytes,
-                                 cld_results.bytes_found))
+                                 len(utf8Bytes)-1))
         elif ret_code != 0:
             raise ValueError("Unknown Error !")
 

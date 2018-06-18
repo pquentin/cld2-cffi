@@ -140,11 +140,12 @@ extern "C" {
                                                 &valid_prefix_bytes);
 
         results->reliable = is_reliable;
-        results->bytes_found = text_bytes_found;
         results->valid_prefix_bytes = valid_prefix_bytes;
 
         if (valid_prefix_bytes < num_bytes)
             return 3;
+
+        results->bytes_found = text_bytes_found;
 
         for(int idx=0; idx<3; idx++) {
             CLD2::Language lang = language3[idx];
